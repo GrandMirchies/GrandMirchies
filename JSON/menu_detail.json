@@ -1,0 +1,468 @@
+{
+    "menu" :{
+     "menu_items":[
+        {
+            "id" : "1"
+            ,
+            "name":"Porotta"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_001"
+            ,
+            "Price" : "15"             
+        },
+        {
+            "id" : "2"
+            ,
+            "name":"Chapathi"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_002"
+            ,
+            "Price" : "15"  
+        },
+        {
+            "id" : "3"
+            ,
+            "name":"Masala Dosa"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_003"
+            ,
+            "Price" : "70"  
+        },
+        {
+            "id" : "4"
+            ,
+            "name":"Paneer Masala Dosa"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_004"
+            ,
+            "Price" : "120"  
+        },
+        {
+            "id" : "5"
+            ,
+            "name":"Chilly gobi Masala Dosa"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_005"
+            ,
+            "Price" : "110"  
+        },
+        {
+            "id" : "6"
+            ,
+            "name":"Mushroom Masala Dosa"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_006"
+            ,
+            "Price" : "120"  
+        },
+        {
+            "id" : "7"
+            ,
+            "name":"Onion Oottappam"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_007"
+            ,
+            "Price" : "70"  
+        },
+        {
+            "id" : "8"
+            ,
+            "name":"Podi Oottappam"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_008"
+            ,
+            "Price" : "70"  
+        },
+        {
+            "id" : "9"
+            ,
+            "name":"Tomatto Oottappam"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_009"
+            ,
+            "Price" : "70"  
+        },
+        {
+            "id" : "10"
+            ,
+            "name":"Mushroom Oottappam"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_010"
+            ,
+            "Price" : "90"  
+        },
+        {
+            "id" : "11"
+            ,
+            "name":"Ghee Roast"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_011"
+            ,
+            "Price" : "60"  
+        },
+        {
+            "id" : "12"
+            ,
+            "name":"Dosa Set"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_012"
+            ,
+            "Price" : "50"  
+        },
+        {
+            "id" : "13"
+            ,
+            "name":"Idly Set"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_013"
+            ,
+            "Price" : "50"  
+        },
+        {
+            "id" : "14"
+            ,
+            "name":"Poori Set"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_014"
+            ,
+            "Price" : "80"  
+        },
+        {
+            "id" : "15"
+            ,
+            "name":"Veg Meals"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_015"
+            ,
+            "Price" : "80"  
+        },
+        {
+            "id" : "16"
+            ,
+            "name":"Fish Curry Meals"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_016"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "17"
+            ,
+            "name":"Pidi & Chicken curry"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_017"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "18"
+            ,
+            "name":"Kappa & fish curry"
+            ,
+            "category" : "South Indian"
+            ,
+            "category_id" : "s_018"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "19"
+            ,
+            "name":"Veg Noodles"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_001"
+            ,
+            "Price" : "110"  
+        },
+        {
+            "id" : "20"
+            ,
+            "name":"Egg Noodles"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_002"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "21"
+            ,
+            "name":"Chicken Noodles"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_003"
+            ,
+            "Price" : "140"  
+        },
+        {
+            "id" : "22"
+            ,
+            "name":"Veg Fried Rice"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_004"
+            ,
+            "Price" : "110"  
+        },
+        {
+            "id" : "23"
+            ,
+            "name":"Egg Fried Rice"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_004"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "24"
+            ,
+            "name":"Chicken Fried Rice"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_006"
+            ,
+            "Price" : "140"  
+        },
+        {
+            "id" : "25"
+            ,
+            "name":"Schezwan Fried Rice"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_007"
+            ,
+            "Price" : "150"  
+        },
+        {
+            "id" : "26"
+            ,
+            "name":"Dragon Chicken"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_008"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "27"
+            ,
+            "name":"Chilly Chicken"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_009"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "28"
+            ,
+            "name":"Garlic Chicken"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_010"
+            ,
+            "Price" : "140"  
+        },
+        {
+            "id" : "29"
+            ,
+            "name":"Ginger Chicken"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_011"
+            ,
+            "Price" : "140"  
+        },
+        {
+            "id" : "30"
+            ,
+            "name":"Dragon Paneer"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_012"
+            ,
+            "Price" : "120"  
+        },
+        {
+            "id" : "31"
+            ,
+            "name":"Gobi Manchurian"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_013"
+            ,
+            "Price" : "120"  
+        },
+        {
+            "id" : "32"
+            ,
+            "name":"Chilly Gobi"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_014"
+            ,
+            "Price" : "110"  
+        },
+        {
+            "id" : "33"
+            ,
+            "name":"Gobi 65"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_015"
+            ,
+            "Price" : "110"  
+        },
+        {
+            "id" : "34"
+            ,
+            "name":"Paneer 65"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_016"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "35"
+            ,
+            "name":"Chicken 65"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_017"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "36"
+            ,
+            "name":"Chicken Lollipop"
+            ,
+            "category" : "Chineese"
+            ,
+            "category_id" : "c_018"
+            ,
+            "Price" : "130"  
+        },
+        {
+            "id" : "37"
+            ,
+            "name":"Hot & Sour Veg"
+            ,
+            "category" : "Soups"
+            ,
+            "category_id" : "so_001"
+            ,
+            "Price" : "80"  
+        },
+        {
+            "id" : "38"
+            ,
+            "name":"Sweet Corn Veg"
+            ,
+            "category" : "Soups"
+            ,
+            "category_id" : "so_002"
+            ,
+            "Price" : "80"  
+        },
+        {
+            "id" : "39"
+            ,
+            "name":"Manchow Veg"
+            ,
+            "category" : "Soups"
+            ,
+            "category_id" : "so_003"
+            ,
+            "Price" : "100"  
+        },
+        {
+            "id" : "40"
+            ,
+            "name":"Hot & Sour Chicken"
+            ,
+            "category" : "Soups"
+            ,
+            "category_id" : "so_004"
+            ,
+            "Price" : "100"  
+        },
+        {
+            "id" : "41"
+            ,
+            "name":"Sweet corn Chicken"
+            ,
+            "category" : "Soups"
+            ,
+            "category_id" : "so_005"
+            ,
+            "Price" : "100"  
+        },
+        {
+            "id" : "42"
+            ,
+            "name":"Manchow Chicken"
+            ,
+            "category" : "Soups"
+            ,
+            "category_id" : "so_006"
+            ,
+            "Price" : "110"  
+        }     
+     ]
+    }
+} 
