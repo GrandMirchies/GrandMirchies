@@ -115,3 +115,36 @@
     new WOW({ mobile: false }).init();
 
 })(jQuery);
+var script_url = "https://script.google.com/macros/s/AKfycbyZdkZlS0-vfxF3wdvGjDI0RCBxpPjz1PI1GHREdbt0JOMIXjamKChSFDosW-p4z89O/exec";
+function submitEnquiry(){
+  try{  
+    var name, emailaddress, subject,message;   
+    name = $("#cf-name").val(); 
+    emailaddress = $("#cf-email").val().toString();
+    subject = $("#cf-subject").val(); 
+    message = $("#cf-message").val();  
+      var url = script_url + "?callback=ctrlq&name=" + name + "&emailaddress=" + emailaddress + "&subject="+subject+"&message="+message+"&action=insert"; 
+      console.log(url);
+      var request = $.ajax({ 
+          async:false,
+          crossDomain: true,  
+          url: url,
+          method: "GET",
+          dataType: "jsonp" 
+        });   
+     }   
+ catch(ex){
+    console.log(ex);
+ } 
+}
+ 
+function ctrlq(e) {   
+    if(e.is_success){ 
+      if(confirm("Thank you, Enquiry is submitted successfully.")){ 
+        window.location.reload();
+      } 
+      else{
+        window.location.reload();
+      }
+     } 
+}  
