@@ -115,16 +115,33 @@
     new WOW({ mobile: false }).init();
 
 })(jQuery);
+$(function(){    
+  InitValidation($("#enquiryform")); 
+}); 
+function InitValidation($formid){
+  $formid.validate({
+    errorElement : 'div',
+    errorPlacement: function(error, element) {
+      var placement = $(element).data('error');
+      if (placement) {
+        $(placement).append(error)
+      } else {
+        error.insertBefore(element);
+      }
+    }
+  });  
+}
 var script_url = "https://script.google.com/macros/s/AKfycbyZdkZlS0-vfxF3wdvGjDI0RCBxpPjz1PI1GHREdbt0JOMIXjamKChSFDosW-p4z89O/exec";
 function submitEnquiry(){
   try{  
+    if($("#enquiryform").valid()){  
+    $(".preloader").show();
     var name, emailaddress, subject,message;   
     name = $("#cf-name").val(); 
     emailaddress = $("#cf-email").val().toString();
     subject = $("#cf-subject").val(); 
     message = $("#cf-message").val();  
       var url = script_url + "?callback=ctrlq&name=" + name + "&emailaddress=" + emailaddress + "&subject="+subject+"&message="+message+"&action=insert"; 
-      console.log(url);
       var request = $.ajax({ 
           async:false,
           crossDomain: true,  
@@ -133,14 +150,25 @@ function submitEnquiry(){
           dataType: "jsonp" 
         });   
      }   
+    }
  catch(ex){
     console.log(ex);
+    $(".preloader").hide();
  } 
 }
  
-function ctrlq(e) {   
+function ctrlq(e) { 
+  $(".preloader").hide();  
     if(e.is_success){ 
       if(confirm("Thank you, Enquiry is submitted successfully.")){ 
+        window.location.reload();
+      } 
+      else{
+        window.location.reload();
+      }
+     }
+     else{
+      if(confirm("Sorry, We couldn't place your enquiry!")){ 
         window.location.reload();
       } 
       else{
