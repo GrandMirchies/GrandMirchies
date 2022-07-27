@@ -54,7 +54,13 @@ http://www.templatemo.com/tm-515-eatery
     line-height: 24px;
   }
 
-
+  .error{
+    border-color: #ed4444 !important;
+    font-size: x-small; 
+    color: red;
+    float: left;
+    padding: 2px 5px 5px 15px;
+  }
 
   /*---------------------------------------
      GENERAL               
