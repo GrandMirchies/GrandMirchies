@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title> 
+    <title>GrandBakersInn Admin</title> 
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet"> 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
@@ -32,7 +32,7 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"> 
                     <ul class="navbar-nav">   
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="/admin.html" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                 <img class="img-profile rounded-circle"
@@ -41,7 +41,7 @@
                         </li>
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">  
-                            <a style="padding: 0;" class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            <a style="padding: 0;" class="nav-link dropdown-toggle" href="/admin.html" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                <h4 class="text-gray-800" style="margin-bottom: 0px;">Grand Bakers Inn Admin</h4>
                             </a> 
@@ -56,9 +56,26 @@
                 <div class="container-fluid"> 
 
                     <!-- Content Row -->
+                    <div class="row mb-4" id="updated_section" style="display: none;"> 
+                    <select id="updated_section_select" class="form-control">
+                    <option value="Morning">Morning Opening</option>
+                    <option value="Evening">Evening Closing</option>
+                    <option value="Night">Night Closing</option>
+                    </select>
+                    </div> 
                     <div class="row" id="snack_update_panel"> 
                         
                     </div>  
+                    <div class="row center" id="norecords" style="display: none;"> 
+                        <p>No Stock updates available</p>
+                    </div>  
+                    <div class="row">
+                        <a id="save_stock" style="display: none;" class='btn btn-success btn-icon-split col-xl-3 col-md-6 mb-4'>
+                            <span class='icon text-white-50'>
+                                <i class='fas fa-check'></i>
+                                <span class='text'>Save Stock</span>
+                        </a>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->

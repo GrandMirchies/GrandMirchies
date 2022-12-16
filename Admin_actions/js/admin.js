@@ -6,6 +6,13 @@ $("#addproduct_modal").modal();
     $("#stock_update").on("click", function(){
         window.location.href="product_update.html";
     }); 
+    $(".nav-link").on("click", function(){
+        window.location.href="admin.html";
+    });
+    $("#save_stock").on("click", function(){
+        fnsaveStock();
+        return false;
+    });
 });
 function fnminusclick(id){ 
     var $input = $(id).parent().find('input');
@@ -74,15 +81,54 @@ function getsnacks()
     var ajaxurl = api_url + "?sheetname=tbl_snacks&action=get_snacks";
     $.getJSON(ajaxurl, function (json) {
         var filtered_array = json.records.filter(s=>s.is_deleted == 0);
-        dynamicBindingStocks(filtered_array);
+        if(filtered_array !=null && filtered_array.length > 0){
+            $("#save_stock").css("display", "block");
+            $("#norecords").css("display","none");
+            $("#updated_section").css("display", "block");
+            dynamicBindingStocks(filtered_array);
+        }
+        else{ 
+            $("#norecords").css("display","block");
+            $("#save_stock").css("display", "none");
+            $("#updated_section").css("display", "none");
+            $('#cover-spin').hide(0);
+        } 
      });
 }
 function dynamicBindingStocks(json){
-    var dynamic_control = "";
+    var dynamic_control = ""; 
     $.each(json, function(i,v){
         var snack_name = v.snacks;
-        dynamic_control = dynamic_control + "<div class='col-xl-3 col-md-6 mb-4'><div class='card border-left-primary shadow h-100 py-2'><div class='card-body'><div class='row no-gutters align-items-center'><div class='col mr-2'><table><tr><td class='wper60'><div class='h6 mb-0 font-weight-bold text-gray-800'>"+snack_name+"</div></td><td><div class='number'><span class='minus btn-success' onclick='return fnminusclick(this);'>-</span><input type='text' class='numbercontrol' value='0'/><span class='plus  btn-success' onclick='return fnplusclick(this);'>+</span></div></td></tr></table></div></div></div></div></div>";
-    });
+        dynamic_control = dynamic_control + "<div class='col-xl-3 col-md-6 mb-4 snack_items'><div class='card border-left-primary shadow h-100 py-2'><div class='card-body'><div class='row no-gutters align-items-center'><div class='col mr-2'><table><tr><td class='wper60 word-break'><div class='h6 mb-0 font-weight-bold text-gray-800 snack_name'>"+snack_name+"</div></td><td><div class='number'><span class='minus btn-success' onclick='return fnminusclick(this);'>-</span><input type='text' class='numbercontrol' value='0'/><span class='plus  btn-success' onclick='return fnplusclick(this);'>+</span></div></td></tr></table></div></div></div></div></div>";
+    }); 
     $("#snack_update_panel").append(dynamic_control);
     $('#cover-spin').hide(0);
+}
+
+function createJSON() {
+    jsonObj = [];
+    var current_time = new Date(Date.now()).toLocaleTimeString();
+    var date = getdate(new Date(Date.now()).toLocaleDateString());
+    $(".snack_items").each(function() { 
+        var item_name = $(this).find(".snack_name").html();
+        var count = $(this).find('.numbercontrol').val(); 
+        item = {}
+        item["snackname"] = item_name;
+        item["balancecount"] = count;
+        item["date"] = date;
+        item["time"] = current_time;
+        jsonObj.push(item);
+    });
+
+    return jsonObj;
+}
+function fnsaveStock(){
+    jsonObject = [];
+    jsonObject = createJSON();  
+
+}
+function getdate(date){ 
+date = date.split("/"); 
+date = date[2] + "-" + (date[0].length == 1 ? "0" + date[0] : date[0]) + "-" + (date[1].length == 1 ? "0" + date[1] : date[1]);
+return date;
 }

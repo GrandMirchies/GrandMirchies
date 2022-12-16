@@ -67,3 +67,9 @@ font-size: 1rem;
 {
     width: 60% !important;
 }
+.word-break{
+    word-break: break-word;
+}
+.center{
+    text-align: center;
+}
